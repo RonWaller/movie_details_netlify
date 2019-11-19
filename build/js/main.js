@@ -16,7 +16,7 @@ async function getMovies(year) {
   const movies = [];
        
   for (let i = 1; i < 4; i++) {
-  const response = await axios.get(`./netlify/functions/getMovies?page=${i}&primary_release_year=${year}`);
+  const response = await axios.get(`/.netlify/functions/getMovies?page=${i}&primary_release_year=${year}`);
   const { results } = response.data;
   results.forEach(item => {
     movies.push(item);
