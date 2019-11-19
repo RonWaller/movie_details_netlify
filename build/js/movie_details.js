@@ -15,7 +15,7 @@ document.addEventListener('click', e => {
 
 async function movieDetails(ID) {
   const id = parseInt(ID);
-  const { data } = await axios.get(`/.netlfity/functions/getmoviedetails/?id=${id}`);
+  const { data } = await axios.get(`/.netlify/functions/getmoviedetails/?id=${id}`);
   return data;
 }
 
