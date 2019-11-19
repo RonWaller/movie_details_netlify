@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="../build/css/style.css" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script defer src="./js/main.js"></script>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+		></script>
+		<title>The Movie Island</title>
+	</head>
+	<body>
+		<header>
+			<nav id="nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li>
+						<a
+							href="https://www.themoviedb.org/movie?language=en-US"
+							target="_blank"
+							>TMDb</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="hero">
+			<h1>New Movie Release Dates</h1>
+		</div>
+		<main>
+			<h3>50 Most Popular Movies By Year</h3>
+			<div class="movie_year">
+				<ul>
+					<li class="btn active">2019</li>
+					<li class="btn">2018</li>
+					<li class="btn">2017</li>
+					<li class="btn">2016</li>
+					<li class="btn">2015</li>
+				</ul>
+			</div>
+			<div class="container">
+				<!-- cards inserted here with javascript -->
+			</div>
+		</main>
+	</body>
+</html>

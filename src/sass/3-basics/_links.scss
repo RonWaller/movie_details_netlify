@@ -1,0 +1,11 @@
+a {
+	color: $navy;
+	text-decoration: none;
+	outline: 0;
+
+	&:hover,
+	&:focus {
+		color: $blue;
+		cursor: pointer;
+	}
+}

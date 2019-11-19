@@ -1,0 +1,83 @@
+// border-box box model allows us to add padding and border to our elements without increasing their size
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 18px;
+	line-height: 1.6;
+	color: black;
+	margin: 0;
+	padding: 0;
+	background-image: url('../img/movie_seats.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+ul {
+	list-style: none;
+}
+
+header {
+	height: 50px;
+	background-color: $olive;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+	// background-image: url('../img/movie_seats.jpg');
+	// background-repeat: no-repeat;
+	// background-position: center;
+	// background-size: cover;
+	// background-attachment: fixed;
+	// opacity: 0.75;
+	padding-top: 25px;
+	& h3 {
+		font-family: 'Roboto', sans-serif;
+		color: $silver;
+		text-align: center;
+	}
+}
+.movie_year {
+	margin-top: 20px;
+	& ul {
+		display: flex;
+		color: #fff;
+		justify-content: center;
+		& li {
+			margin: 0 20px;
+		}
+	}
+}
+
+.btn {
+	font-family: 'Roboto', sans-serif;
+	background-color: $olive;
+	color: $navy;
+	border-radius: 5px;
+	padding: 5px 10px;
+	&:hover {
+		color: $blue;
+		cursor: pointer;
+	}
+}
+
+.active {
+	background-color: $blue;
+	color: $silver;
+	&:hover {
+		color: $silver;
+		cursor: default;
+	}
+}
