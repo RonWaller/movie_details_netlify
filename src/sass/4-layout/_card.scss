@@ -68,7 +68,8 @@
 	}
 }
 
-#info #moreInfo {
+#info #moreInfo,
+li a {
 	cursor: pointer;
 	color: $blue;
 	&:hover {

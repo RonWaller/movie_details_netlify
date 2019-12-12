@@ -2,9 +2,11 @@
 // const moment = require('moment');
 
 // require('dotenv').config();
+const urlParams = new URLSearchParams(window.location.search);
+const movieID = urlParams.get('movieID');
 
 const movie_details = document.querySelector('.movie_details');
-const movieID = localStorage.getItem('id');
+// const movieID = localStorage.getItem('id');
 const image_baseurl = 'https://image.tmdb.org/t/p/';
 
 document.addEventListener('click', e => {

@@ -39,7 +39,7 @@ function buildContent(movies) {
 						<img src="${image_baseurl}${poster_size}${movie.poster_path}" alt="${movie.original_title}">
 						<ul id='info'>
 							<li>${date}</li>
-							<li id='moreInfo' data-movie-id="${movie.id}">More Info</li>
+							<li id='moreInfo' data-movie-id="${movie.id}"><a href="../movie_details.html?movieID=${movie.id}">More Info</a></li>
 						</ul>
 					</div>
 					<div class="movie__description">
@@ -55,13 +55,13 @@ function buildContent(movies) {
 
 document.addEventListener('DOMContentLoaded', init(year));
 
-document.addEventListener('click', e => {
-  if (e.target && e.target.id === 'moreInfo') {
-    movieID = e.target.getAttribute('data-movie-id');
-    localStorage.setItem('id', movieID);
-    window.location.href = './movie_details.html';
-  }
-});
+// document.addEventListener('click', e => {
+//   if (e.target && e.target.id === 'moreInfo') {
+//     movieID = e.target.getAttribute('data-movie-id');
+//     localStorage.setItem('id', movieID);
+//     window.location.href = './movie_details.html';
+//   }
+// });
 
 movieYear.addEventListener('click', e => {
   const { target } = e;
