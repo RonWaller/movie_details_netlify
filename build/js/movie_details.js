@@ -16,8 +16,15 @@ document.addEventListener('click', e => {
 });
 
 async function movieDetails(ID) {
+  let fetchUrl;
   const id = parseInt(ID);
-  const { data } = await axios.get(`/.netlify/functions/getmoviedetails/?id=${id}`);
+  if (window.location.host === '127.0.0.1:5500') {
+    fetchUrl = `http://localhost:9000/getmoviedetails/?id=${id}`;
+  } else {
+    fetchUrl = `/.netlify/functions/getmoviedetails/?id=${id}`;
+  }
+  
+  const { data } = await axios.get(fetchUrl);
   return data;
 }
 

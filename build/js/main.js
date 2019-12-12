@@ -1,5 +1,3 @@
-// const axios = require('axios');
-// const moment = require('moment');
 
 const year = '2019';
 let movieID = '';
@@ -14,9 +12,18 @@ function init(year) {
 
 async function getMovies(year) {
   const movies = [];
-       
+  
   for (let i = 1; i < 4; i++) {
-  const response = await axios.get(`/.netlify/functions/getMovies?page=${i}&primary_release_year=${year}`);
+    let fetchUrl
+
+    if (window.location.host === '127.0.0.1:5500') {
+      fetchUrl = `http://localhost:9000/getMovies?page=${i}&primary_release_year=${year}`;
+    } else {
+      fetchUrl = `/.netlify/functions/getMovies?page=${i}&primary_release_year=${year}`;
+    }
+    console.log(window.location.host);
+    console.log(fetchUrl);
+  const response = await axios.get(fetchUrl);
   const { results } = response.data;
   results.forEach(item => {
     movies.push(item);
@@ -39,7 +46,7 @@ function buildContent(movies) {
 						<img src="${image_baseurl}${poster_size}${movie.poster_path}" alt="${movie.original_title}">
 						<ul id='info'>
 							<li>${date}</li>
-							<li id='moreInfo' data-movie-id="${movie.id}"><a href="../movie_details.html?movieID=${movie.id}">More Info</a></li>
+							<li id='moreInfo' data-movie-id="${movie.id}"><a href="./movie_details.html?movieID=${movie.id}">More Info</a></li>
 						</ul>
 					</div>
 					<div class="movie__description">

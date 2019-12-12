@@ -309,12 +309,14 @@ hr {
   background: #ddd;
 }
 
-#info #moreInfo {
+#info #moreInfo,
+li a {
   cursor: pointer;
   color: #0074d9;
 }
 
-#info #moreInfo:hover {
+#info #moreInfo:hover,
+li a:hover {
   color: #85144b;
 }
 
