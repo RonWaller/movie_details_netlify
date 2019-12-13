@@ -28,8 +28,12 @@
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	color: $white;
-	&:hover {
+	// color: $white;
+	a {
+		text-decoration: none;
+		color: $white;
+	}
+	a:hover {
 		cursor: pointer;
 		color: $blue;
 	}
