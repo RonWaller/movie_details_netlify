@@ -1,19 +1,10 @@
-// const axios = require('axios');
-// const moment = require('moment');
 
-// require('dotenv').config();
 const urlParams = new URLSearchParams(window.location.search);
 const movieID = urlParams.get('movieID');
 
 const movie_details = document.querySelector('.movie_details');
 // const movieID = localStorage.getItem('id');
 const image_baseurl = 'https://image.tmdb.org/t/p/';
-
-// document.addEventListener('click', e => {
-//   if (e.target && e.target.id === 'goback') {
-//     window.location.href = './index.html';
-//   }
-// });
 
 async function movieDetails(ID) {
   let fetchUrl;
@@ -40,8 +31,6 @@ function buildDetail(movie) {
   const revenue = getCurrency(movie.revenue);
   const genre = getGenres(movie);
   const releaseInfo = getReleaseInfo(dateInfo);
-
-  // <a href="javascript:window.history.back();">go back</a>
 
   const html = `
     <div class="big_card">
