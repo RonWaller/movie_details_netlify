@@ -45,7 +45,7 @@ function buildDetail(movie) {
 
   const html = `
     <div class="big_card">
-      <div id='goback' class='goback'><a href="javascript:window.history.back();">&#x2190; Go Back</a></div>
+      <div id='goback' class='goback'><a href="/index.html">&#x2190; Go Back</a></div>
       <div class="movie_poster">
         <img src="${image_baseurl}${poster_size}${movie.poster_path}" alt="">
       </div>
