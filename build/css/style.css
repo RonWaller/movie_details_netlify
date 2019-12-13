@@ -348,10 +348,14 @@ li a:hover {
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+.goback a {
+  text-decoration: none;
   color: #fff;
 }
 
-.goback:hover {
+.goback a:hover {
   cursor: pointer;
   color: #0074d9;
 }

@@ -9,11 +9,11 @@ const movie_details = document.querySelector('.movie_details');
 // const movieID = localStorage.getItem('id');
 const image_baseurl = 'https://image.tmdb.org/t/p/';
 
-document.addEventListener('click', e => {
-  if (e.target && e.target.id === 'goback') {
-    window.location.href = './index.html';
-  }
-});
+// document.addEventListener('click', e => {
+//   if (e.target && e.target.id === 'goback') {
+//     window.location.href = './index.html';
+//   }
+// });
 
 async function movieDetails(ID) {
   let fetchUrl;
@@ -41,9 +41,11 @@ function buildDetail(movie) {
   const genre = getGenres(movie);
   const releaseInfo = getReleaseInfo(dateInfo);
 
+  // <a href="javascript:window.history.back();">go back</a>
+
   const html = `
     <div class="big_card">
-      <div id='goback' class='goback'>&#x2190; Go Back</div>
+      <div id='goback' class='goback'><a href="javascript:window.history.back();">&#x2190; Go Back</a></div>
       <div class="movie_poster">
         <img src="${image_baseurl}${poster_size}${movie.poster_path}" alt="">
       </div>
